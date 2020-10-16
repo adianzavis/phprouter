@@ -143,7 +143,7 @@ class Router
                 $attributes[GroupAttributes::MIDDLEWARE] = [$attributes[GroupAttributes::MIDDLEWARE]];
             }
 
-            $this->middleware = array_merge($attributes[GroupAttributes::MIDDLEWARE], $this->middleware);
+            $this->middleware = array_merge($this->middleware, $attributes[GroupAttributes::MIDDLEWARE]);
         }
 
         // Set namespace for the group
