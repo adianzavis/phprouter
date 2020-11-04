@@ -313,7 +313,7 @@ class Router
         $controller = $route->getController();
 
         if (count($middleware = $route->getMiddleware()) > 0) {
-            $controllerRunner = function (ServerRequest $request) use ($controller, $parameters) {
+            $controllerRunner = function (ServerRequestInterface $request) use ($controller, $parameters) {
                 return $this->runController($controller, $parameters, $request);
             };
 
